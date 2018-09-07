@@ -1,23 +1,10 @@
-# metro-sample-app
+## metro-script-module support
+This is a fork of the metro-sample app to repro for an issue filed against metro.
 
-This repo contains a very simplistic web app being built with [metro](https://github.com/facebook/metro), using the minimal configuration.
+### To see the issue
 
-## Development
-
-To use metro for development, start the metro server by running:
-
-```
-$ yarn run server
-```
-
-Now you can open the `dev.html` file and start modifying the code in the `src/` folder.
-
-## Production
-
-In order to build the app for production, execute:
-
-```
-$ yarn run build
-```
-
-This will generate the production bundle in the `build/` folder. You can test it by opening the `prod.html` file in your browser.
+1. `npm install`
+1. `node devServer.js`
+1. open `http://localhost:3000/dev.html`
+1. Notice that we're using [`type="module"` in our script tag in dev.html](dev.html).
+1. open the devtools console and notice the error
